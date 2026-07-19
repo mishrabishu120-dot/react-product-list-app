@@ -45,6 +45,7 @@ export interface Order {
   subtotal: number;
   shipping: number;
   tax: number;
+  discount?: number;
   total: number;
   status: "processing" | "shipped" | "delivered" | "cancelled";
   address: ShippingAddress;
@@ -66,7 +67,7 @@ export interface PromoCode {
   minOrder: number;
 }
 
-export type SortOrder = "default" | "asc" | "desc";
+export type SortOrder = "default" | "asc" | "desc" | "price-asc" | "price-desc";
 export type ViewMode = "grid" | "list";
 export type Theme = "light" | "dark";
 
